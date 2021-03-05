@@ -13,6 +13,6 @@ Que indique el promedio de tiempo de dialogo de las llamadas con tipo Cel LD dur
 SELECT AVG(tiempoDialogo) FROM di WHERE fechaDeLlamada >= '20200201' and fechaDeLlamada <= '20200229' and tipoDeLlamada = 'Cel LD';
 
 Que muestre el número en minutos de dialogo (tomando tiempoDialogo que está en segundos) y el costo de todas las llamadas del mes de enero
-SELECT SUM(tiempoDialogo)/60.00 AS minutosDeDialogo FROM di WHERE fechaDeLlamada >= '20200101' and fechaDeLlamada <= '20200131';
-SELECT COUNT(tipoDeLlamada) as Total FROM di WHERE fechaDeLlamada >= '20200101' and fechaDeLlamada <= '20200131' and tipoDeLlamada = 'Cel';
+SELECT SUM(tiempoDialogo)/60.00 AS minutosDeDialogo FROM logDial WHERE fechaDeLlamada >= '20200101' and fechaDeLlamada <= '20200131';
+SELECT COUNT(tipoDeLlamada) as Total FROM logDial WHERE fechaDeLlamada >= '20200101' and fechaDeLlamada <= '20200131' and tipoDeLlamada = 'Cel';
 
